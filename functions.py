@@ -25,7 +25,7 @@ def kakaya_to_funksia(data, tag):
             results.append(record)
     return results
 
-def add_post(post, filename):
+def add_post(filename, post):
     data = open_file(filename)
     data.append(post)
     with open(filename, 'w', encoding='utf-8') as f:
