@@ -44,9 +44,9 @@ def page_post_create():
     return render_template('post_uploaded.html', post=post)
 
 
-@app.route("/uploads/<path:path>")
+@app.route("/uploads/images/<path>")
 def static_dir(path):
-    return send_from_directory("uploads", path)
+    return send_from_directory("uploads/images", path)
 
 
 app.run(debug=True)
